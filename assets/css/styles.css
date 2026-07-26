@@ -30,9 +30,9 @@
   --body-font: "Space Grotesk", sans-serif;
 
   /*========== Font sizes ==========*/
-  --big-font-size: 8rem;
+  --big-font-size: 6rem;
   --h1-font-size: 3.75rem;
-  --h2-font-size: 3rem;
+  --h2-font-size: 2.75rem;
   --h3-font-size: 1.5rem;
   --larger-font-size: 1.25rem;
   --large-font-size: 1.125rem;
@@ -114,7 +114,27 @@ img {
 ==========*/
 
 /*=============== REUSABLE CSS CLASSES ===============*/
+.section {
+  padding-block: 6rem 4rem;
+}
 
+.button {
+  display: inline-flex;
+  background: var(--second-gradient);
+  color: var(--white-color);
+  padding: 1.25rem 2rem;
+  border-radius: 0.5rem;
+  font-weight: var(--font-semi-bold);
+  transition: background 0.3s;
+}
+
+.button:hover {
+  background: linear-gradient(
+    260deg,
+    var(--first-color) 0%,
+    var(--first-color-dark) 100%
+  );
+}
 /*=============== LAYOUT ===============*/
 
 .container {
@@ -204,8 +224,41 @@ img {
   padding-top: 6rem;
 }
 
+.home-tittle {
+  font-size: var(--big-font-size);
+  line-height: 1;
+  margin-bottom: 2rem;
+}
+
+.home-job {
+  font-size: var(--h2-font-size);
+  font-weight: var(--font-semi-bold);
+}
+
+.home-description {
+  font-size: var(--large-font-size);
+  margin-block: 1.5rem 2rem;
+}
+
 .home-img-wrapper {
   width: 38rem;
+  background: var(--second-gradient);
+  border-radius: 60% 40% 70% 30% / 69% 47% 53% 31%;
+  overflow: hidden;
+}
+
+.home-social {
+  row-gap: 1rem;
+}
+
+.home-social-link {
+  color: var(--title-color);
+  font-size: var(--larger-font-size);
+  transition: color 0.3s;
+}
+
+.home-social-link:rover {
+  color: var(--first-color);
 }
 
 /*=============== ABOUT ===============*/
