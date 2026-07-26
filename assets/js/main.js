@@ -13,7 +13,9 @@
 /*==================== SCROLL SECTIONS ACTIVE LINK ====================*/
 
 /*==================== SCROLL ABOUT ANIMATION ====================*/
+gsap.registerPlugin(schrollTrigger);
 
+gsap.utils.toArray(".class");
 /*==================== DARK LIGHT THEME ====================*/
 
 /*==================== MIXITUP FILTER PORTFOLIO ====================*/
