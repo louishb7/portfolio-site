@@ -300,10 +300,11 @@ img {
 }
 
 .text-gradient {
-  -webkit-text-fill-color: hsl(var(--second-hue), 8%, 85%, 0.2);
+  -webkit-text-fill-color: hsla(var(--second-hue), 8%, 85%, 0.2);
   background: var(--first-gradient);
   background-clip: text;
   background-size: 0% 100%;
+  background-repeat: no-repeat;
 }
 
 .about-data {
