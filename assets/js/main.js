@@ -13,20 +13,27 @@
 /*==================== SCROLL SECTIONS ACTIVE LINK ====================*/
 
 /*==================== SCROLL ABOUT ANIMATION ====================*/
-gsap.registerPlugin(ScrollTrigger);
+/* GSAP and ScrollTrigger come from a CDN and may be unavailable */
+if (typeof gsap === "undefined" || typeof ScrollTrigger === "undefined") {
+  console.error(
+    "GSAP/ScrollTrigger failed to load: text gradient animations are disabled.",
+  );
+} else {
+  gsap.registerPlugin(ScrollTrigger);
 
-gsap.utils.toArray(".text-gradient").forEach((span) => {
-  gsap.to(span, {
-    backgroundSize: "100% 100%",
-    ease: "none",
-    scrollTrigger: {
-      trigger: span,
-      start: "top bottom",
-      end: "top center",
-      scrub: true,
-    },
+  gsap.utils.toArray(".text-gradient").forEach((span) => {
+    gsap.to(span, {
+      backgroundSize: "100% 100%",
+      ease: "none",
+      scrollTrigger: {
+        trigger: span,
+        start: "top bottom",
+        end: "top center",
+        scrub: true,
+      },
+    });
   });
-});
+}
 
 /*==================== DARK LIGHT THEME ====================*/
 
