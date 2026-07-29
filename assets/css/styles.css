@@ -25,6 +25,11 @@
     var(--first-color-dark) 0%,
     var(--first-color) 100%
   );
+  --second-gradient-hover: linear-gradient(
+    260deg,
+    var(--first-color) 0%,
+    var(--first-color-dark) 100%
+  );
 
   /*========== Font family ==========*/
   --body-font: "Space Grotesk", sans-serif;
@@ -118,9 +123,14 @@ img {
   padding-block: 6rem 4rem;
 }
 
+.button,
+.home-img-wrapper,
+.about-experience {
+  background: var(--second-gradient);
+}
+
 .button {
   display: inline-flex;
-  background: var(--second-gradient);
   color: var(--white-color);
   padding: 1.25rem 2rem;
   border-radius: 0.5rem;
@@ -129,17 +139,31 @@ img {
 }
 
 .button:hover {
-  background: linear-gradient(
-    260deg,
-    var(--first-color) 0%,
-    var(--first-color-dark) 100%
-  );
+  background: var(--second-gradient-hover);
 }
 
 .section-title {
   text-align: center;
   font-size: var(--h1-font-size);
   margin-bottom: 4.25rem;
+}
+
+.nav-logo,
+.nav-link,
+.change-theme,
+.home-social-link,
+.services-no {
+  color: var(--title-color);
+}
+
+.nav-link,
+.home-social-link {
+  transition: color 0.3s;
+}
+
+.nav-link:hover,
+.home-social-link:hover {
+  color: var(--first-color);
 }
 
 /*=============== LAYOUT ===============*/
@@ -176,12 +200,6 @@ img {
   height: 4.5rem;
 }
 
-.nav-logo,
-.nav-link,
-.change-theme {
-  color: var(--title-color);
-}
-
 .nav-logo {
   font-size: var(--h3-font-size);
   font-weight: var(--font-bold);
@@ -197,11 +215,6 @@ img {
 
 .nav-link {
   font-weight: var(--font-medium);
-  transition: color 0.3s;
-}
-
-.nav-link:hover {
-  color: var(--first-color);
 }
 
 .change-theme {
@@ -249,7 +262,6 @@ img {
 
 .home-img-wrapper {
   width: 38rem;
-  background: var(--second-gradient);
   border-radius: 60% 40% 70% 30% / 69% 47% 53% 31%;
   overflow: hidden;
 }
@@ -259,13 +271,7 @@ img {
 }
 
 .home-social-link {
-  color: var(--title-color);
   font-size: var(--larger-font-size);
-  transition: color 0.3s;
-}
-
-.home-social-link:rover {
-  color: var(--first-color);
 }
 
 /*=============== ABOUT ===============*/
@@ -278,7 +284,6 @@ img {
 .about-experience {
   width: 280px;
   height: 420px;
-  background: var(--second-gradient);
   border-radius: 1rem;
   display: grid;
   place-content: center;
@@ -341,7 +346,6 @@ img {
 }
 
 .services-no {
-  color: var(--title-color);
   font-size: var(--h1-font-size);
   font-weight: var(--font-bold);
 }
