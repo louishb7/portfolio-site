@@ -407,6 +407,41 @@ img {
 /*=============== RESUME ===============*/
 
 /*=============== PORTFOLIO ===============*/
+.work-list {
+  display: flex;
+  justify-content: center;
+  column-gap: 2rem;
+  margin-bottom: 3.5rem;
+}
+
+.work-item {
+  color: var(--title-color);
+  font-weight: var(--font-semi-bold);
+  cursor: pointer;
+  position: relative;
+  padding-bottom: 0.5rem;
+  transition: color 0.3s;
+}
+
+.work-item:hover,
+.active-work {
+  color: var(--first-color);
+}
+
+.work-item::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--first-color);
+  transition: width 0.3s;
+}
+
+.active-work::before {
+  width: 60%;
+}
 
 /*=============== CONTACT ===============*/
 
