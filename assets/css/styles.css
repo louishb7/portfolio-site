@@ -57,6 +57,10 @@
   --gradient-text-fill: hsla(var(--second-hue), 28%, 18%, 0.2);
 }
 
+[data-theme="dark"] .devicon-prisma-original.colored {
+  color: var(--title-color);
+}
+
 /*=============== BASE ===============*/
 * {
   margin: 0;
@@ -296,15 +300,13 @@ img {
 }
 
 .skills-container {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1.75rem;
+  grid-template-columns: 1fr;
+  max-width: 60rem;
+  gap: 3rem;
 }
 
 .skills-group {
-  padding: 2rem;
-  background-color: var(--surface-color);
-  border: 1px solid var(--surface-border-color);
-  border-radius: 1rem;
+  min-width: 0;
 }
 
 .skills-title {
@@ -314,16 +316,47 @@ img {
 
 .skills-list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
-  gap: 0.75rem;
+  grid-template-columns: repeat(auto-fill, minmax(9rem, 1fr));
+  gap: 1rem;
 }
 
-.skills-item {
-  padding: 0.75rem 1rem;
+.skills-card {
+  display: grid;
+  min-height: 9rem;
+  padding: 1.25rem;
+  place-items: center;
+  align-content: center;
+  gap: 0.75rem;
   color: var(--title-color);
+  text-align: center;
+  background-color: var(--surface-color);
   border: 1px solid var(--surface-border-color);
-  border-radius: 0.5rem;
+  border-radius: 0.75rem;
   font-weight: var(--font-medium);
+  transition: transform 0.3s;
+}
+
+.skills-card:hover {
+  transform: translateY(-0.25rem);
+}
+
+.skills-icon {
+  font-size: 3rem;
+  line-height: 1;
+}
+
+.skills-icons {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.skills-icons .skills-icon {
+  font-size: 2.25rem;
+}
+
+.skills-icon--rest {
+  color: var(--first-color);
 }
 
 .contact:empty {
