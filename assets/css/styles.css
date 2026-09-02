@@ -13,6 +13,8 @@
   --text-color: hsl(var(--second-hue), 8%, 75%);
   --body-color: hsl(var(--second-hue), 28%, 12%);
   --white-color: hsl(var(--second-hue), 8%, 100%);
+  --surface-color: hsl(var(--second-hue), 28%, 15%);
+  --surface-border-color: hsla(var(--second-hue), 8%, 85%, 0.1);
   --gradient-color: var(--white-color);
   --gradient-text-fill: hsla(var(--second-hue), 8%, 85%, 0.2);
 
@@ -49,6 +51,8 @@
   --title-color: hsl(var(--second-hue), 28%, 18%);
   --text-color: hsl(var(--second-hue), 18%, 32%);
   --body-color: hsl(var(--second-hue), 28%, 96%);
+  --surface-color: hsl(var(--second-hue), 28%, 100%);
+  --surface-border-color: hsla(var(--second-hue), 28%, 18%, 0.12);
   --gradient-color: var(--title-color);
   --gradient-text-fill: hsla(var(--second-hue), 28%, 18%, 0.2);
 }
@@ -271,7 +275,8 @@ img {
 }
 
 .about-description {
-  font-size: var(--h2-font-size);
+  max-width: 60rem;
+  font-size: var(--large-font-size);
   margin-bottom: 2rem;
 }
 
@@ -281,6 +286,44 @@ img {
   background-clip: text;
   background-size: 0% 100%;
   background-repeat: no-repeat;
+}
+
+/*=============== SKILLS ===============*/
+.skills-description {
+  max-width: 48rem;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.skills-container {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.75rem;
+}
+
+.skills-group {
+  padding: 2rem;
+  background-color: var(--surface-color);
+  border: 1px solid var(--surface-border-color);
+  border-radius: 1rem;
+}
+
+.skills-title {
+  margin-bottom: 1.5rem;
+  font-size: var(--h3-font-size);
+}
+
+.skills-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
+  gap: 0.75rem;
+}
+
+.skills-item {
+  padding: 0.75rem 1rem;
+  color: var(--title-color);
+  border: 1px solid var(--surface-border-color);
+  border-radius: 0.5rem;
+  font-weight: var(--font-medium);
 }
 
 .contact:empty {
@@ -363,8 +406,8 @@ img {
     column-gap: 1.5rem;
   }
 
-  .about-description {
-    font-size: var(--h3-font-size);
+  .skills-container {
+    grid-template-columns: 1fr;
   }
 
   .section-title {
