@@ -4,6 +4,24 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <script>
+      (() => {
+        try {
+          const savedTheme = localStorage.getItem("portfolio-theme");
+          const theme =
+            savedTheme === "light" || savedTheme === "dark"
+              ? savedTheme
+              : window.matchMedia("(prefers-color-scheme: light)").matches
+                ? "light"
+                : "dark";
+
+          document.documentElement.dataset.theme = theme;
+        } catch {
+          document.documentElement.dataset.theme = "dark";
+        }
+      })();
+    </script>
+
     <!--=============== REMIXICON ===============-->
     <link
       href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css"
@@ -45,15 +63,21 @@
           </button>
         </div>
 
-        <button
-          class="nav-toggle"
-          type="button"
-          aria-label="Open menu"
-          aria-controls="nav-menu"
-          aria-expanded="false"
-        >
-          <i class="ri-menu-line" aria-hidden="true"></i>
-        </button>
+        <div class="nav-actions">
+          <button class="theme-toggle" type="button" aria-label="Switch theme">
+            <i class="ri-sun-line" aria-hidden="true"></i>
+          </button>
+
+          <button
+            class="nav-toggle"
+            type="button"
+            aria-label="Open menu"
+            aria-controls="nav-menu"
+            aria-expanded="false"
+          >
+            <i class="ri-menu-line" aria-hidden="true"></i>
+          </button>
+        </div>
       </nav>
     </header>
 

@@ -2,6 +2,38 @@ const navMenu = document.getElementById("nav-menu");
 const navToggle = document.querySelector(".nav-toggle");
 const navClose = document.querySelector(".nav-close");
 const navLinks = document.querySelectorAll(".nav-link");
+const themeToggle = document.querySelector(".theme-toggle");
+const themeIcon = themeToggle?.querySelector("i");
+
+function updateThemeToggle(theme) {
+  if (!themeToggle || !themeIcon) return;
+
+  const isDark = theme === "dark";
+  themeIcon.className = isDark ? "ri-sun-line" : "ri-moon-line";
+  themeToggle.setAttribute(
+    "aria-label",
+    isDark ? "Switch to light theme" : "Switch to dark theme",
+  );
+}
+
+function setTheme(theme) {
+  document.documentElement.dataset.theme = theme;
+
+  try {
+    localStorage.setItem("portfolio-theme", theme);
+  } catch {}
+
+  updateThemeToggle(theme);
+}
+
+const currentTheme = document.documentElement.dataset.theme || "dark";
+updateThemeToggle(currentTheme);
+
+themeToggle?.addEventListener("click", () => {
+  setTheme(
+    document.documentElement.dataset.theme === "dark" ? "light" : "dark",
+  );
+});
 
 function setMenuState(isOpen) {
   if (!navMenu || !navToggle) return;
