@@ -4,6 +4,11 @@ const navClose = document.querySelector(".nav-close");
 const navLinks = document.querySelectorAll(".nav-link");
 const themeToggle = document.querySelector(".theme-toggle");
 const themeIcon = themeToggle?.querySelector("i");
+const currentYear = document.querySelector(".current-year");
+
+if (currentYear) {
+  currentYear.textContent = new Date().getFullYear();
+}
 
 function updateThemeToggle(theme) {
   if (!themeToggle || !themeIcon) return;

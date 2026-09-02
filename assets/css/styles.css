@@ -442,8 +442,65 @@ img {
   font-size: 1rem;
 }
 
-.contact:empty {
-  padding-block: 0;
+/*=============== CONTACT ===============*/
+.contact {
+  padding-block: 4rem;
+}
+
+.contact .section-title {
+  margin-bottom: 1.25rem;
+}
+
+.contact-container {
+  max-width: 48rem;
+  text-align: center;
+}
+
+.contact-description {
+  font-size: var(--large-font-size);
+}
+
+.contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.contact-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.25rem;
+  color: var(--title-color);
+  font-weight: var(--font-semi-bold);
+}
+
+.contact-link:hover {
+  color: var(--first-color);
+}
+
+.contact-link i {
+  color: var(--first-color);
+  font-size: var(--larger-font-size);
+}
+
+/*=============== FOOTER ===============*/
+.footer {
+  padding-block: 2rem;
+  border-top: 1px solid var(--surface-border-color);
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.footer-role {
+  color: var(--title-color);
+  font-weight: var(--font-semi-bold);
 }
 
 /*=============== BREAKPOINTS ===============*/
@@ -530,6 +587,12 @@ img {
     grid-template-columns: 1fr;
   }
 
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
   .section-title {
     font-size: var(--h2-font-size);
     margin-bottom: 3rem;
@@ -555,5 +618,14 @@ img {
 
   .home-img-wrapper {
     max-width: 22rem;
+  }
+
+  .contact-links {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-link {
+    overflow-wrap: anywhere;
   }
 }
