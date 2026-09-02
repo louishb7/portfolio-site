@@ -1,3 +1,23 @@
+const navMenu = document.getElementById("nav-menu");
+const navToggle = document.querySelector(".nav-toggle");
+const navClose = document.querySelector(".nav-close");
+const navLinks = document.querySelectorAll(".nav-link");
+
+function setMenuState(isOpen) {
+  if (!navMenu || !navToggle) return;
+
+  navMenu.classList.toggle("show-menu", isOpen);
+  navToggle.setAttribute("aria-expanded", String(isOpen));
+}
+
+if (navMenu && navToggle) {
+  navToggle.addEventListener("click", () => setMenuState(true));
+  navClose?.addEventListener("click", () => setMenuState(false));
+  navLinks.forEach((link) => {
+    link.addEventListener("click", () => setMenuState(false));
+  });
+}
+
 /*==================== SCROLL ABOUT ANIMATION ====================*/
 gsap.registerPlugin(ScrollTrigger);
 

@@ -189,6 +189,11 @@ img {
   color: var(--first-color);
 }
 
+.nav-toggle,
+.nav-close {
+  display: none;
+}
+
 /*=============== MAIN ===============*/
 
 /*=============== HOME ===============*/
@@ -253,4 +258,116 @@ img {
   background-clip: text;
   background-size: 0% 100%;
   background-repeat: no-repeat;
+}
+
+.contact:empty {
+  padding-block: 0;
+}
+
+/*=============== BREAKPOINTS ===============*/
+@media screen and (max-width: 1024px) {
+  .home-container {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 22rem) max-content;
+    column-gap: 2rem;
+  }
+
+  .home-img-wrapper {
+    width: 100%;
+  }
+
+  .home-title {
+    font-size: 5rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .nav-toggle,
+  .nav-close {
+    display: inline-flex;
+    color: var(--title-color);
+    cursor: pointer;
+    font-size: 1.5rem;
+  }
+
+  .nav-toggle {
+    margin-left: auto;
+  }
+
+  .nav-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: min(20rem, 80vw);
+    height: 100dvh;
+    padding: 6rem 2rem 2rem;
+    background-color: var(--body-color);
+    transition: right 0.3s;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    row-gap: 2rem;
+  }
+
+  .nav-close {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+  }
+
+  .show-menu {
+    right: 0;
+  }
+
+  .home-container {
+    grid-template-columns: 1fr;
+    row-gap: 2rem;
+    padding-top: 8rem;
+  }
+
+  .home-data {
+    text-align: center;
+  }
+
+  .home-img-wrapper {
+    max-width: 30rem;
+    margin-inline: auto;
+  }
+
+  .home-social {
+    display: flex;
+    justify-content: center;
+    column-gap: 1.5rem;
+  }
+
+  .about-description {
+    font-size: var(--h3-font-size);
+  }
+
+  .section-title {
+    font-size: var(--h2-font-size);
+    margin-bottom: 3rem;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .section {
+    padding-block: 5rem 3rem;
+  }
+
+  .nav-list {
+    row-gap: 1.5rem;
+  }
+
+  .home-title {
+    font-size: 3.5rem;
+  }
+
+  .home-job {
+    font-size: 1.75rem;
+  }
+
+  .home-img-wrapper {
+    max-width: 22rem;
+  }
 }
