@@ -15,14 +15,6 @@
   --white-color: hsl(var(--second-hue), 8%, 100%);
   --surface-color: hsl(var(--second-hue), 28%, 15%);
   --surface-border-color: hsla(var(--second-hue), 8%, 85%, 0.1);
-  --gradient-color: var(--white-color);
-  --gradient-text-fill: hsla(var(--second-hue), 8%, 85%, 0.2);
-
-  --first-gradient: linear-gradient(
-    150deg,
-    var(--first-color) 0%,
-    var(--gradient-color) 100%
-  );
   --second-gradient: linear-gradient(
     260deg,
     var(--first-color-dark) 0%,
@@ -53,8 +45,6 @@
   --body-color: hsl(var(--second-hue), 28%, 96%);
   --surface-color: hsl(var(--second-hue), 28%, 100%);
   --surface-border-color: hsla(var(--second-hue), 28%, 18%, 0.12);
-  --gradient-color: var(--title-color);
-  --gradient-text-fill: hsla(var(--second-hue), 28%, 18%, 0.2);
 }
 
 [data-theme="dark"] .devicon-prisma-original.colored {
@@ -332,14 +322,6 @@ img {
   max-width: 60rem;
   font-size: var(--large-font-size);
   margin-bottom: 2rem;
-}
-
-.text-gradient {
-  -webkit-text-fill-color: var(--gradient-text-fill);
-  background: var(--first-gradient);
-  background-clip: text;
-  background-size: 0% 100%;
-  background-repeat: no-repeat;
 }
 
 /*=============== SKILLS ===============*/
