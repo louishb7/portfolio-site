@@ -19,6 +19,7 @@ function updateThemeToggle(theme) {
     "aria-label",
     isDark ? "Switch to light theme" : "Switch to dark theme",
   );
+  themeToggle.setAttribute("aria-pressed", String(isDark));
 }
 
 function setTheme(theme) {
@@ -40,33 +41,45 @@ themeToggle?.addEventListener("click", () => {
   );
 });
 
-function setMenuState(isOpen) {
+function setMenuState(isOpen, returnFocus = false) {
   if (!navMenu || !navToggle) return;
 
   navMenu.classList.toggle("show-menu", isOpen);
   navToggle.setAttribute("aria-expanded", String(isOpen));
+
+  if (isOpen) {
+    navClose?.focus();
+  } else if (returnFocus) {
+    navToggle.focus();
+  }
 }
 
 if (navMenu && navToggle) {
   navToggle.addEventListener("click", () => setMenuState(true));
-  navClose?.addEventListener("click", () => setMenuState(false));
+  navClose?.addEventListener("click", () => setMenuState(false, true));
   navLinks.forEach((link) => {
     link.addEventListener("click", () => setMenuState(false));
   });
 }
 
 /*==================== SCROLL ABOUT ANIMATION ====================*/
-gsap.registerPlugin(ScrollTrigger);
+const prefersReducedMotion = window.matchMedia(
+  "(prefers-reduced-motion: reduce)",
+).matches;
 
-gsap.utils.toArray(".text-gradient").forEach((span) => {
-  gsap.to(span, {
-    backgroundSize: "100% 100%",
-    ease: "none",
-    scrollTrigger: {
-      trigger: span,
-      start: "top bottom",
-      end: "top center",
-      scrub: true,
-    },
+if (!prefersReducedMotion) {
+  gsap.registerPlugin(ScrollTrigger);
+
+  gsap.utils.toArray(".text-gradient").forEach((span) => {
+    gsap.to(span, {
+      backgroundSize: "100% 100%",
+      ease: "none",
+      scrollTrigger: {
+        trigger: span,
+        start: "top bottom",
+        end: "top center",
+        scrub: true,
+      },
+    });
   });
-});
+}
