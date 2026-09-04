@@ -287,7 +287,7 @@ img {
 }
 
 .home-img-wrapper {
-  width: 38rem;
+  width: 28rem;
   background: var(--second-gradient);
   border-radius: 60% 40% 70% 30% / 69% 47% 53% 31%;
   overflow: hidden;
@@ -606,7 +606,7 @@ img {
   }
 
   .home-img-wrapper {
-    max-width: 30rem;
+    max-width: 22rem;
     margin-inline: auto;
   }
 
@@ -654,7 +654,7 @@ img {
   }
 
   .home-img-wrapper {
-    max-width: 22rem;
+    max-width: 18rem;
   }
 
   .contact-links {
