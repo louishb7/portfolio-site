@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <title>Henrique Freitas</title>
+  <defs>
+    <linearGradient id="brand" x1="8" y1="8" x2="56" y2="56" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#8b4dff" />
+      <stop offset="1" stop-color="#32166f" />
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="14" fill="#161d29" />
+  <rect x="5" y="5" width="54" height="54" rx="12" fill="url(#brand)" />
+  <text
+    x="32"
+    y="40"
+    fill="#ffffff"
+    font-family="Arial, sans-serif"
+    font-size="23"
+    font-weight="700"
+    letter-spacing="-1.5"
+    text-anchor="middle"
+  >HF</text>
+</svg>
