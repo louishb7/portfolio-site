@@ -117,7 +117,7 @@ img {
 
 /*=============== REUSABLE CSS CLASSES ===============*/
 .section {
-  padding-block: 6rem 4rem;
+  padding-block: 5.5rem 3.5rem;
 }
 
 .button {
@@ -140,8 +140,8 @@ img {
 
 .section-title {
   text-align: center;
-  font-size: var(--h1-font-size);
-  margin-bottom: 4.25rem;
+  font-size: 3.25rem;
+  margin-bottom: 3.5rem;
 }
 
 /*=============== LAYOUT ===============*/
@@ -264,37 +264,47 @@ img {
 
 /*=============== HOME ===============*/
 .home-container {
-  grid-template-columns: 1fr repeat(2, max-content);
+  grid-template-areas:
+    "data image"
+    "social image";
+  grid-template-columns: minmax(0, 1.25fr) minmax(20rem, 0.75fr);
   align-items: center;
-  column-gap: 3rem;
-  padding-top: 6rem;
+  column-gap: 2.5rem;
+  row-gap: 0.75rem;
+  padding-top: 5rem;
+}
+
+.home-data {
+  grid-area: data;
+  max-width: 43rem;
 }
 
 .home-title {
-  font-size: var(--big-font-size);
-  line-height: 1;
-  margin-bottom: 2rem;
-}
-
-.home-job {
-  font-size: var(--h2-font-size);
+  font-size: 2.5rem;
+  line-height: 1.2;
   font-weight: var(--font-semi-bold);
+  margin-bottom: 0;
 }
 
 .home-description {
   font-size: var(--large-font-size);
-  margin-block: 1.5rem 2rem;
+  margin-block: 1.25rem 1.75rem;
 }
 
 .home-img-wrapper {
-  width: 28rem;
+  grid-area: image;
+  justify-self: center;
+  width: 24rem;
   background: var(--second-gradient);
   border-radius: 60% 40% 70% 30% / 69% 47% 53% 31%;
   overflow: hidden;
 }
 
 .home-social {
-  row-gap: 1rem;
+  grid-area: social;
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
 }
 
 .home-social-link {
@@ -315,7 +325,12 @@ img {
 /*=============== ABOUT ===============*/
 .about-container {
   grid-template-columns: 1fr;
+  max-width: 60rem;
   align-items: center;
+}
+
+.about-title {
+  margin-bottom: 2.5rem;
 }
 
 .about-description {
@@ -348,14 +363,14 @@ img {
 
 .skills-list {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(9rem, 1fr));
+  grid-template-columns: repeat(6, minmax(0, 1fr));
   gap: 1rem;
 }
 
 .skills-card {
   display: grid;
-  min-height: 9rem;
-  padding: 1.25rem;
+  min-height: 8.5rem;
+  padding: 1rem;
   place-items: center;
   align-content: center;
   gap: 0.75rem;
@@ -393,7 +408,7 @@ img {
 
 /*=============== PROJECTS ===============*/
 .projects-container {
-  grid-template-columns: repeat(2, minmax(0, 360px));
+  grid-template-columns: repeat(2, minmax(0, 430px));
   justify-content: center;
   gap: 1.5rem;
 }
@@ -477,7 +492,7 @@ img {
 
 /*=============== CONTACT ===============*/
 .contact {
-  padding-block: 4rem;
+  padding-block: 3.5rem;
 }
 
 .contact .section-title {
@@ -537,18 +552,40 @@ img {
 }
 
 /*=============== BREAKPOINTS ===============*/
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1100px) {
   .home-container {
-    grid-template-columns: minmax(0, 1fr) minmax(0, 22rem) max-content;
-    column-gap: 2rem;
+    grid-template-areas:
+      "data"
+      "image"
+      "social";
+    grid-template-columns: 1fr;
+    row-gap: 2rem;
+    padding-top: 7rem;
+  }
+
+  .home-data {
+    max-width: 44rem;
+    text-align: center;
+    margin-inline: auto;
   }
 
   .home-img-wrapper {
-    width: 100%;
+    width: min(20rem, 100%);
+    margin-inline: auto;
   }
 
-  .home-title {
-    font-size: 5rem;
+  .home-social {
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1100px) {
+  .home-container {
+    grid-template-areas:
+      "data"
+      "social"
+      "image";
+    row-gap: 1.25rem;
   }
 }
 
@@ -620,6 +657,10 @@ img {
     grid-template-columns: 1fr;
   }
 
+  .skills-list {
+    grid-template-columns: repeat(auto-fill, minmax(9rem, 1fr));
+  }
+
   .projects-container {
     grid-template-columns: 1fr;
   }
@@ -631,8 +672,12 @@ img {
   }
 
   .section-title {
-    font-size: var(--h2-font-size);
-    margin-bottom: 3rem;
+    font-size: 2.5rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .about-title {
+    margin-bottom: 2rem;
   }
 }
 
@@ -646,11 +691,7 @@ img {
   }
 
   .home-title {
-    font-size: 3.5rem;
-  }
-
-  .home-job {
-    font-size: 1.75rem;
+    font-size: 2rem;
   }
 
   .home-img-wrapper {
