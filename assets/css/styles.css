@@ -451,6 +451,10 @@ img {
   overflow: hidden;
 }
 
+.project-media--cadisk {
+  aspect-ratio: 2 / 1;
+}
+
 .project-image {
   width: 100%;
   height: 100%;
