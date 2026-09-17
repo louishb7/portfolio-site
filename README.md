@@ -19,7 +19,7 @@ The portfolio includes responsive design, light and dark themes, persistent them
 
 ### BunkerMode
 
-Task management system that turns long-term goals into daily execution.
+Modular personal organization system built around tasks, objectives and focused execution.
 
 Stack: TypeScript, React, Vite, Node.js, NestJS, Prisma, PostgreSQL, Docker and Jest.
 
@@ -28,7 +28,7 @@ Stack: TypeScript, React, Vite, Node.js, NestJS, Prisma, PostgreSQL, Docker and 
 
 ### Cadisk
 
-Dental lab management system for tracking cases, production stages and deliveries.
+Dental lab workflow management system designed for CAD designers to track work received from dentists throughout its production lifecycle.
 
 Stack: TypeScript, React, Vite, Node.js, NestJS, Prisma, PostgreSQL, Docker and Jest.
 
