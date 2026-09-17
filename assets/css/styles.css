@@ -48,10 +48,6 @@
   --surface-border-color: hsla(var(--second-hue), 28%, 18%, 0.12);
 }
 
-[data-theme="dark"] .devicon-prisma-original.colored {
-  color: var(--title-color);
-}
-
 /*=============== BASE ===============*/
 * {
   margin: 0;
