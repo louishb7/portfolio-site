@@ -28,7 +28,7 @@ const translations = {
     "social.github": "Perfil no GitHub",
     "about.title": "Sobre",
     "about.description":
-      "Estudante de analise e desenvolvimento de sistemas com foco em backend. Antes disso, trabalhei com suporte técnico em um provedor de internet, diagnosticando e resolvendo problemas de conexão tanto remotamente quanto presencialmente no local. Essa experiência me ensinou a analisar problemas de forma sistemática antes de tirar conclusões, algo que hoje orienta meu trabalho com backend.",
+      "Estudante de análise e desenvolvimento de sistemas com foco em backend. Antes disso, trabalhei com suporte técnico em um provedor de internet, diagnosticando e resolvendo problemas de conexão tanto remotamente quanto presencialmente no local. Essa experiência me ensinou a analisar problemas de forma sistemática antes de tirar conclusões, algo que hoje orienta meu trabalho com backend.",
     "about.cv": "Baixar currículo",
     "skills.title": "Minhas habilidades",
     "skills.description":
