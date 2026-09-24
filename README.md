@@ -40,3 +40,30 @@ Stack: TypeScript, React, Vite, Node.js, NestJS, Prisma, PostgreSQL, Docker and 
 - LinkedIn: https://www.linkedin.com/in/louishb7/
 - GitHub: https://github.com/louishb7
 - Email: [henriquefreitasdev@gmail.com](mailto:henriquefreitasdev@gmail.com)
+
+## Idiomas e artigos
+
+A interface é estática e usa português por padrão. `assets/js/i18n.js` concentra os textos PT/EN, atualiza os elementos com `data-i18n` (ou atributos `data-i18n-*`) e persiste a escolha em `localStorage`. Páginas novas reutilizam `assets/js/main.js`, o seletor da header e essas chaves.
+
+`/articles/` é uma página HTML própria. O índice usa `assets/js/articles.js`, sem CMS nem backend. Para publicar um artigo:
+
+1. Crie `articles/<slug>/index.html` com a mesma header/footer, os assets por caminhos absolutos (`/assets/...`) e o corpo em `<article class="article-document" lang="pt-BR">` ou `lang="en"`. Use `body data-page="article"`, `<main>`, metadata e canonical próprios, e inclua `/assets/js/main.js` como módulo. O CSS já cobre headings, listas, código, citações, links e imagens. Inclua um link de volta para `/articles/` com `data-i18n="articles.back"`.
+2. Acrescente uma entrada ao array `articles` em `assets/js/articles.js`:
+
+   ```js
+   {
+     slug: "meu-artigo",
+     date: "2026-09-23",
+     versions: {
+       pt: {
+         title: "Título real",
+         description: "Resumo real",
+         readingTime: 5,
+         tags: ["Backend"],
+         href: "/articles/meu-artigo/",
+       },
+     },
+   }
+   ```
+
+3. Para uma tradução futura, crie outra página estática e adicione `en` em `versions` com seu próprio `href`. O índice prefere a versão no idioma da interface; quando ela não existe, mostra a versão disponível e informa o idioma do texto. O corpo de cada página permanece no idioma em que foi escrito, independentemente do idioma escolhido para a interface.

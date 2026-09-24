@@ -1,23 +1,23 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
     <meta
       name="description"
-      content="Portfolio of Henrique Freitas, a Software Development student focused on backend development with TypeScript, Node.js and NestJS."
+      content="Portfólio de Henrique Freitas, estudante de Desenvolvimento de Software com foco em backend, TypeScript, Node.js e NestJS."
     />
     <link rel="canonical" href="https://henriquefreitas.tech/" />
 
     <meta property="og:type" content="website" />
     <meta
       property="og:title"
-      content="Henrique Freitas | Backend-Focused Developer"
+      content="Henrique Freitas | Desenvolvedor com foco em Backend"
     />
     <meta
       property="og:description"
-      content="Portfolio of Henrique Freitas, a Software Development student focused on backend development with TypeScript, Node.js and NestJS."
+      content="Portfólio de Henrique Freitas, estudante de Desenvolvimento de Software com foco em backend, TypeScript, Node.js e NestJS."
     />
     <meta property="og:url" content="https://henriquefreitas.tech/" />
     <meta
@@ -30,11 +30,11 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta
       name="twitter:title"
-      content="Henrique Freitas | Backend-Focused Developer"
+      content="Henrique Freitas | Desenvolvedor com foco em Backend"
     />
     <meta
       name="twitter:description"
-      content="Portfolio of Henrique Freitas, a Software Development student focused on backend development with TypeScript, Node.js and NestJS."
+      content="Portfólio de Henrique Freitas, estudante de Desenvolvimento de Software com foco em backend, TypeScript, Node.js e NestJS."
     />
     <meta
       name="twitter:image"
@@ -78,10 +78,12 @@
     <!--=============== CSS ===============-->
     <link rel="stylesheet" href="assets/css/styles.css" />
 
-    <title>Henrique Freitas | Backend-Focused Developer</title>
+    <title>Henrique Freitas | Desenvolvedor com foco em Backend</title>
   </head>
-  <body>
-    <a class="skip-link" href="#main-content">Skip to main content</a>
+  <body data-page="home">
+    <a class="skip-link" href="#main-content" data-i18n="skip.main"
+      >Ir para o conteúdo principal</a
+    >
 
     <!--=============== HEADER ===============-->
     <header class="header">
@@ -91,36 +93,111 @@
         <div class="nav-menu" id="nav-menu">
           <ul class="nav-list">
             <li class="nav-item">
-              <a href="#home" class="nav-link">Home</a>
+              <a href="#home" class="nav-link" data-i18n="nav.home">Início</a>
             </li>
             <li class="nav-item">
-              <a href="#about" class="nav-link">About</a>
+              <a href="#about" class="nav-link" data-i18n="nav.about">Sobre</a>
             </li>
             <li class="nav-item">
-              <a href="#skills" class="nav-link">Skills</a>
+              <a href="#skills" class="nav-link" data-i18n="nav.skills"
+                >Habilidades</a
+              >
             </li>
             <li class="nav-item">
-              <a href="#projects" class="nav-link">Projects</a>
+              <a href="#projects" class="nav-link" data-i18n="nav.projects"
+                >Projetos</a
+              >
             </li>
             <li class="nav-item">
-              <a href="#contact" class="nav-link">Contact</a>
+              <a href="#contact" class="nav-link" data-i18n="nav.contact"
+                >Contato</a
+              >
+            </li>
+            <li class="nav-item">
+              <a href="/articles/" class="nav-link" data-i18n="nav.articles"
+                >Artigos</a
+              >
             </li>
           </ul>
 
-          <button class="nav-close" type="button" aria-label="Close menu">
+          <div
+            class="language-switch language-switch--mobile"
+            role="group"
+            aria-label="Idioma do site"
+            data-i18n-aria-label="language.label"
+          >
+            <button
+              class="language-option"
+              type="button"
+              data-language="pt"
+              lang="pt-BR"
+              aria-pressed="true"
+            >
+              PT
+            </button>
+            <span class="language-divider" aria-hidden="true">/</span>
+            <button
+              class="language-option"
+              type="button"
+              data-language="en"
+              lang="en"
+              aria-pressed="false"
+            >
+              EN
+            </button>
+          </div>
+
+          <button
+            class="nav-close"
+            type="button"
+            aria-label="Fechar menu"
+            data-i18n-aria-label="nav.close"
+          >
             <i class="ri-close-line" aria-hidden="true"></i>
           </button>
         </div>
 
         <div class="nav-actions">
-          <button class="theme-toggle" type="button" aria-label="Switch theme">
+          <div
+            class="language-switch"
+            role="group"
+            aria-label="Idioma do site"
+            data-i18n-aria-label="language.label"
+          >
+            <button
+              class="language-option"
+              type="button"
+              data-language="pt"
+              lang="pt-BR"
+              aria-pressed="true"
+            >
+              PT
+            </button>
+            <span class="language-divider" aria-hidden="true">/</span>
+            <button
+              class="language-option"
+              type="button"
+              data-language="en"
+              lang="en"
+              aria-pressed="false"
+            >
+              EN
+            </button>
+          </div>
+
+          <button
+            class="theme-toggle"
+            type="button"
+            aria-label="Ativar tema claro"
+          >
             <i class="ri-sun-line" aria-hidden="true"></i>
           </button>
 
           <button
             class="nav-toggle"
             type="button"
-            aria-label="Open menu"
+            aria-label="Abrir menu"
+            data-i18n-aria-label="nav.open"
             aria-controls="nav-menu"
             aria-expanded="false"
           >
@@ -136,15 +213,19 @@
       <section class="home section" id="home">
         <div class="home-container container grid">
           <div class="home-data">
-            <h1 class="home-title">Backend-Focused Developer</h1>
+            <h1 class="home-title" data-i18n="hero.title">
+              Desenvolvedor com foco em Backend
+            </h1>
 
-            <p class="home-description">
-              I build backend applications and APIs, focusing my studies on
-              TypeScript, Node.js and NestJS.
+            <p class="home-description" data-i18n="hero.description">
+              Desenvolvo aplicações backend e APIs, com estudos focados em
+              TypeScript, Node.js e NestJS.
             </p>
           </div>
           <div class="home-actions">
-            <a href="#projects" class="button">View Projects</a>
+            <a href="#projects" class="button" data-i18n="hero.projects"
+              >Ver projetos</a
+            >
 
             <div class="home-social grid">
               <a
@@ -152,7 +233,8 @@
                 target="_blank"
                 rel="noopener noreferrer"
                 class="home-social-link"
-                aria-label="LinkedIn profile"
+                aria-label="Perfil no LinkedIn"
+                data-i18n-aria-label="social.linkedin"
               >
                 <i class="ri-linkedin-fill" aria-hidden="true"></i>
               </a>
@@ -162,7 +244,8 @@
                 target="_blank"
                 rel="noopener noreferrer"
                 class="home-social-link"
-                aria-label="GitHub profile"
+                aria-label="Perfil no GitHub"
+                data-i18n-aria-label="social.github"
               >
                 <i class="ri-github-fill" aria-hidden="true"></i>
               </a>
@@ -176,20 +259,25 @@
 
       <!--=============== ABOUT ===============-->
       <section class="about section" id="about">
-        <h2 class="section-title about-title">About</h2>
+        <h2 class="section-title about-title" data-i18n="about.title">Sobre</h2>
         <div class="about-container container grid">
           <div>
-            <p class="about-description">
-              I'm a Software Development student focused on backend. Before
-              that, I worked in technical support for an internet provider —
-              diagnosing connectivity issues both remotely and on-site, and
-              managing customer accounts through an admin dashboard. That
-              experience taught me to think through problems systematically
-              before jumping to conclusions, which now shapes how I approach
-              backend work.
+            <p class="about-description" data-i18n="about.description">
+              Sou estudante de Desenvolvimento de Software com foco em backend.
+              Antes disso, trabalhei com suporte técnico em um provedor de
+              internet — diagnosticando problemas de conexão remotamente e no
+              local, além de gerenciar contas de clientes em um painel
+              administrativo. Essa experiência me ensinou a analisar problemas
+              de forma sistemática antes de tirar conclusões, algo que hoje
+              orienta meu trabalho com backend.
             </p>
-            <a href="assets/pdf/henrique_cv.pdf" download="" class="button">
-              Download CV
+            <a
+              href="assets/pdf/henrique_cv.pdf"
+              download=""
+              class="button"
+              data-i18n="about.cv"
+            >
+              Baixar currículo
             </a>
           </div>
         </div>
@@ -197,10 +285,12 @@
 
       <!--=============== SKILLS ===============-->
       <section class="skills section" id="skills">
-        <h2 class="section-title">My Skills</h2>
+        <h2 class="section-title" data-i18n="skills.title">
+          Minhas habilidades
+        </h2>
 
-        <p class="skills-description container">
-          These are the technologies and tools I work with.
+        <p class="skills-description container" data-i18n="skills.description">
+          Estas são as tecnologias e ferramentas com as quais trabalho.
         </p>
 
         <div class="skills-container container grid">
@@ -246,7 +336,9 @@
           </section>
 
           <section class="skills-group">
-            <h3 class="skills-title">Tools &amp; Environment</h3>
+            <h3 class="skills-title" data-i18n="skills.tools">
+              Ferramentas e ambiente
+            </h3>
             <ul class="skills-list">
               <li class="skills-card">
                 <span class="skills-icons" aria-hidden="true">
@@ -269,14 +361,15 @@
 
       <!--=============== PROJECTS ===============-->
       <section class="projects section" id="projects">
-        <h2 class="section-title">Projects</h2>
+        <h2 class="section-title" data-i18n="projects.title">Projetos</h2>
 
         <div class="projects-container container grid">
           <article class="project-card">
             <div class="project-media">
               <img
                 src="assets/img/bunkermode-cover.png"
-                alt="BunkerMode presentation on desktop, tablet and mobile"
+                alt="Apresentação do BunkerMode em desktop, tablet e celular"
+                data-i18n-alt="projects.bunker.alt"
                 class="project-image"
                 width="1672"
                 height="941"
@@ -287,19 +380,22 @@
             <div class="project-content">
               <p class="project-context">Full Stack · TypeScript · NestJS</p>
               <h3 class="project-title">BunkerMode</h3>
-              <p class="project-description">
-                Task management system that turns long-term goals into daily
-                execution.
+              <p
+                class="project-description"
+                data-i18n="projects.bunker.description"
+              >
+                Sistema de gestão de tarefas que conecta objetivos de longo
+                prazo à execução diária.
               </p>
 
               <div class="project-links">
                 <a
-                  href="https://bunkermodeproject.vercel.app/"
+                  href="https://bunkermode.henriquefreitas.tech/"
                   class="project-link"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Live Demo
+                  <span data-i18n="projects.live">Ver demonstração</span>
                   <i class="ri-external-link-line" aria-hidden="true"></i>
                 </a>
                 <a
@@ -318,7 +414,8 @@
             <div class="project-media">
               <img
                 src="assets/img/cadisk-cover.png"
-                alt="Cadisk presentation on desktop, tablet and mobile"
+                alt="Apresentação do Cadisk em desktop, tablet e celular"
+                data-i18n-alt="projects.cadisk.alt"
                 class="project-image"
                 width="1672"
                 height="941"
@@ -329,9 +426,12 @@
             <div class="project-content">
               <p class="project-context">Full Stack · TypeScript · NestJS</p>
               <h3 class="project-title">Cadisk</h3>
-              <p class="project-description">
-                Dental lab management system for tracking cases, production
-                stages and deliveries.
+              <p
+                class="project-description"
+                data-i18n="projects.cadisk.description"
+              >
+                Sistema de gestão para laboratórios de prótese dentária, com
+                acompanhamento de casos, etapas de produção e entregas.
               </p>
 
               <div class="project-links">
@@ -341,7 +441,7 @@
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Live Demo
+                  <span data-i18n="projects.live">Ver demonstração</span>
                   <i class="ri-external-link-line" aria-hidden="true"></i>
                 </a>
                 <a
@@ -360,12 +460,12 @@
 
       <!--=============== CONTACT ===============-->
       <section class="contact section" id="contact">
-        <h2 class="section-title">Contact</h2>
+        <h2 class="section-title" data-i18n="contact.title">Contato</h2>
 
         <div class="contact-container container">
-          <p class="contact-description">
-            I'm open to opportunities and conversations about backend
-            development.
+          <p class="contact-description" data-i18n="contact.description">
+            Estou aberto a oportunidades e conversas sobre desenvolvimento
+            backend.
           </p>
 
           <ul class="contact-links">
@@ -408,12 +508,14 @@
     <!--=============== FOOTER ===============-->
     <footer class="footer">
       <div class="footer-container container">
-        <p class="footer-role">Backend-Focused Developer</p>
+        <p class="footer-role" data-i18n="footer.role">
+          Desenvolvedor com foco em Backend
+        </p>
         <p>© <span class="current-year"></span> Henrique Freitas</p>
       </div>
     </footer>
 
     <!--=============== MAIN JS ===============-->
-    <script src="assets/js/main.js"></script>
+    <script type="module" src="assets/js/main.js"></script>
   </body>
 </html>

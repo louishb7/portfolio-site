@@ -1,3 +1,7 @@
+import { initI18n, t } from "./i18n.js";
+
+initI18n();
+
 const navMenu = document.getElementById("nav-menu");
 const navToggle = document.querySelector(".nav-toggle");
 const navClose = document.querySelector(".nav-close");
@@ -17,7 +21,7 @@ function updateThemeToggle(theme) {
   themeIcon.className = isDark ? "ri-sun-line" : "ri-moon-line";
   themeToggle.setAttribute(
     "aria-label",
-    isDark ? "Switch to light theme" : "Switch to dark theme",
+    isDark ? t("theme.toLight") : t("theme.toDark"),
   );
   themeToggle.setAttribute("aria-pressed", String(isDark));
 }
@@ -34,6 +38,9 @@ function setTheme(theme) {
 
 const currentTheme = document.documentElement.dataset.theme || "dark";
 updateThemeToggle(currentTheme);
+document.addEventListener("portfolio:languagechange", () => {
+  updateThemeToggle(document.documentElement.dataset.theme || "dark");
+});
 
 themeToggle?.addEventListener("click", () => {
   setTheme(

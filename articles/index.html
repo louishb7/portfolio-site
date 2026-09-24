@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml" />
+    <meta
+      name="description"
+      content="Artigos de Henrique Freitas sobre engenharia de software, backend e desenvolvimento."
+    />
+    <link rel="canonical" href="https://henriquefreitas.tech/articles/" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Artigos | Henrique Freitas" />
+    <meta
+      property="og:description"
+      content="Artigos de Henrique Freitas sobre engenharia de software, backend e desenvolvimento."
+    />
+    <meta property="og:url" content="https://henriquefreitas.tech/articles/" />
+    <meta
+      property="og:image"
+      content="https://henriquefreitas.tech/assets/img/social-preview.png"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Artigos | Henrique Freitas" />
+    <meta
+      name="twitter:description"
+      content="Artigos de Henrique Freitas sobre engenharia de software, backend e desenvolvimento."
+    />
+    <meta
+      name="twitter:image"
+      content="https://henriquefreitas.tech/assets/img/social-preview.png"
+    />
+
+    <script>
+      (() => {
+        try {
+          const savedTheme = localStorage.getItem("portfolio-theme");
+          const theme =
+            savedTheme === "light" || savedTheme === "dark"
+              ? savedTheme
+              : window.matchMedia("(prefers-color-scheme: light)").matches
+                ? "light"
+                : "dark";
+
+          document.documentElement.dataset.theme = theme;
+        } catch {
+          document.documentElement.dataset.theme = "dark";
+        }
+      })();
+    </script>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css"
+      rel="stylesheet"
+      integrity="sha384-9nYyW8wOH/oMyhFBYEGqS+nzETiSPqzhZrEb5AE7622JtfxHd/L4KCpkt2g4vTt2"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <title>Artigos | Henrique Freitas</title>
+  </head>
+  <body data-page="articles">
+    <a class="skip-link" href="#main-content" data-i18n="skip.main"
+      >Ir para o conteúdo principal</a
+    >
+
+    <header class="header">
+      <nav class="nav container">
+        <a href="/#home" class="nav-logo">Henrique Freitas</a>
+
+        <div class="nav-menu" id="nav-menu">
+          <ul class="nav-list">
+            <li class="nav-item">
+              <a href="/#home" class="nav-link" data-i18n="nav.home">Início</a>
+            </li>
+            <li class="nav-item">
+              <a href="/#about" class="nav-link" data-i18n="nav.about">Sobre</a>
+            </li>
+            <li class="nav-item">
+              <a href="/#skills" class="nav-link" data-i18n="nav.skills"
+                >Habilidades</a
+              >
+            </li>
+            <li class="nav-item">
+              <a href="/#projects" class="nav-link" data-i18n="nav.projects"
+                >Projetos</a
+              >
+            </li>
+            <li class="nav-item">
+              <a href="/#contact" class="nav-link" data-i18n="nav.contact"
+                >Contato</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                href="/articles/"
+                class="nav-link is-current"
+                aria-current="page"
+                data-i18n="nav.articles"
+                >Artigos</a
+              >
+            </li>
+          </ul>
+
+          <div
+            class="language-switch language-switch--mobile"
+            role="group"
+            aria-label="Idioma do site"
+            data-i18n-aria-label="language.label"
+          >
+            <button
+              class="language-option"
+              type="button"
+              data-language="pt"
+              lang="pt-BR"
+              aria-pressed="true"
+            >
+              PT
+            </button>
+            <span class="language-divider" aria-hidden="true">/</span>
+            <button
+              class="language-option"
+              type="button"
+              data-language="en"
+              lang="en"
+              aria-pressed="false"
+            >
+              EN
+            </button>
+          </div>
+
+          <button
+            class="nav-close"
+            type="button"
+            aria-label="Fechar menu"
+            data-i18n-aria-label="nav.close"
+          >
+            <i class="ri-close-line" aria-hidden="true"></i>
+          </button>
+        </div>
+
+        <div class="nav-actions">
+          <div
+            class="language-switch"
+            role="group"
+            aria-label="Idioma do site"
+            data-i18n-aria-label="language.label"
+          >
+            <button
+              class="language-option"
+              type="button"
+              data-language="pt"
+              lang="pt-BR"
+              aria-pressed="true"
+            >
+              PT
+            </button>
+            <span class="language-divider" aria-hidden="true">/</span>
+            <button
+              class="language-option"
+              type="button"
+              data-language="en"
+              lang="en"
+              aria-pressed="false"
+            >
+              EN
+            </button>
+          </div>
+
+          <button
+            class="theme-toggle"
+            type="button"
+            aria-label="Ativar tema claro"
+          >
+            <i class="ri-sun-line" aria-hidden="true"></i>
+          </button>
+
+          <button
+            class="nav-toggle"
+            type="button"
+            aria-label="Abrir menu"
+            data-i18n-aria-label="nav.open"
+            aria-controls="nav-menu"
+            aria-expanded="false"
+          >
+            <i class="ri-menu-line" aria-hidden="true"></i>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main-content" class="main articles-main" tabindex="-1">
+      <section
+        class="articles-intro container"
+        aria-labelledby="articles-title"
+      >
+        <p class="articles-eyebrow" data-i18n="articles.eyebrow">ESCRITA</p>
+        <h1 id="articles-title" data-i18n="articles.title">Artigos</h1>
+        <p class="articles-description" data-i18n="articles.intro">
+          Estudos, experiências e reflexões sobre engenharia de software,
+          backend e desenvolvimento.
+        </p>
+        <a class="articles-back-link" href="/#home">
+          <i class="ri-arrow-left-line" aria-hidden="true"></i>
+          <span data-i18n="articles.backHome">Voltar ao início</span>
+        </a>
+      </section>
+
+      <section
+        class="articles-section container"
+        aria-labelledby="articles-title"
+      >
+        <div id="articles-list" class="articles-list"></div>
+        <p
+          id="articles-empty"
+          class="articles-empty"
+          data-i18n="articles.empty"
+        >
+          Ainda não há artigos publicados. Este espaço receberá textos novos em
+          breve.
+        </p>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-container container">
+        <p class="footer-role" data-i18n="footer.role">
+          Desenvolvedor com foco em Backend
+        </p>
+        <p>© <span class="current-year"></span> Henrique Freitas</p>
+      </div>
+    </footer>
+
+    <script type="module" src="/assets/js/main.js"></script>
+    <script type="module" src="/assets/js/articles.js"></script>
+  </body>
+</html>
