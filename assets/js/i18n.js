@@ -28,7 +28,7 @@ const translations = {
     "social.github": "Perfil no GitHub",
     "about.title": "Sobre",
     "about.description":
-      "Sou estudante de Desenvolvimento de Software com foco em backend. Antes disso, trabalhei com suporte técnico em um provedor de internet — diagnosticando problemas de conexão remotamente e no local, além de gerenciar contas de clientes em um painel administrativo. Essa experiência me ensinou a analisar problemas de forma sistemática antes de tirar conclusões, algo que hoje orienta meu trabalho com backend.",
+      "Estudante de analise e desenvolvimento de sistemas com foco em backend. Antes disso, trabalhei com suporte técnico em um provedor de internet, diagnosticando e resolvendo problemas de conexão tanto remotamente quanto presencialmente no local. Essa experiência me ensinou a analisar problemas de forma sistemática antes de tirar conclusões, algo que hoje orienta meu trabalho com backend.",
     "about.cv": "Baixar currículo",
     "skills.title": "Minhas habilidades",
     "skills.description":
@@ -88,7 +88,7 @@ const translations = {
     "social.github": "GitHub profile",
     "about.title": "About",
     "about.description":
-      "I'm a Software Development student focused on backend. Before that, I worked in technical support for an internet provider — diagnosing connectivity issues both remotely and on-site, and managing customer accounts through an admin dashboard. That experience taught me to think through problems systematically before jumping to conclusions, which now shapes how I approach backend work.",
+      "I'm a Software Development student focused on backend. Before that, I worked in technical support for an internet provider, diagnosing connectivity issues both remotely and on-site, and managing customer accounts through an admin dashboard. That experience taught me to think through problems systematically before jumping to conclusions, which now shapes how I approach backend work.",
     "about.cv": "Download CV",
     "skills.title": "My Skills",
     "skills.description": "These are the technologies and tools I work with.",
