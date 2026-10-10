@@ -468,6 +468,7 @@ img {
 /*=============== SKILLS ===============*/
 .skills-description {
   max-width: 48rem;
+  margin-inline: auto;
   margin-bottom: 3rem;
   text-align: center;
 }
@@ -485,15 +486,18 @@ img {
 .skills-title {
   margin-bottom: 1.5rem;
   font-size: var(--h3-font-size);
+  text-align: center;
 }
 
 .skills-list {
-  display: grid;
-  grid-template-columns: repeat(6, minmax(0, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 1rem;
 }
 
 .skills-card {
+  flex: 0 0 9rem;
   display: grid;
   min-height: 8.5rem;
   padding: 1rem;
@@ -1036,14 +1040,6 @@ body[data-page="articles"] {
     display: flex;
     justify-content: center;
     column-gap: 1.5rem;
-  }
-
-  .skills-container {
-    grid-template-columns: 1fr;
-  }
-
-  .skills-list {
-    grid-template-columns: repeat(auto-fill, minmax(9rem, 1fr));
   }
 
   .projects-layout {
