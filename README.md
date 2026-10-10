@@ -29,7 +29,7 @@ Stack: PNPM Monorepo, TypeScript, React, Vite, Node.js, NestJS, and Tailwind CSS
 
 Operational workflow management system built for a dental prosthesis laboratory to centralize cases, client dentists, deadlines, deliveries, financial tracking, and visual tooth selection via an interactive odontogram, with installable PWA and offline capabilities.
 
-Stack: JavaScript, React, Vite, Tailwind CSS, Node.js, Express, PostgreSQL, and PWA (IndexedDB offline store).
+Stack: JavaScript, TypeScript, React, Vite, Tailwind CSS, Node.js, NestJS, Prisma, PostgreSQL, and PWA (IndexedDB offline store).
 
 - Live Demo: https://cadisk.vercel.app/
 - GitHub: https://github.com/louishb7/Dental-lab
@@ -49,6 +49,8 @@ The portfolio shares the **mountain + bunker** emblem with BunkerCode and Bunker
 
 - `assets/img/favicon.svg`: master vector SVG (`viewBox="0 0 64 64"`) optically scaled for browser tabs with a high-contrast dark shield core and transparent exterior.
 - `assets/img/favicon.png`: 64×64 RGBA PNG fallback derived directly from the vector master.
+
+The header also reuses the official SVG beside the textual name as a reversible visual proposal. Project covers preserve their original 1672×941 composition; BunkerCode uses illustrative promotional artwork (WebP with JPEG fallback), not an application screenshot. Original PNG assets are retained.
 
 ## Contact
 

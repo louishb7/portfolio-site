@@ -94,7 +94,16 @@
     <!--=============== HEADER ===============-->
     <header class="header">
       <nav class="nav container">
-        <a href="#home" class="nav-logo">Henrique Freitas</a>
+        <a href="#home" class="nav-logo"
+          ><img
+            class="nav-mark"
+            src="/assets/img/favicon.svg"
+            width="28"
+            height="28"
+            alt=""
+            aria-hidden="true"
+          />Henrique Freitas</a
+        >
 
         <div class="nav-menu" id="nav-menu">
           <ul class="nav-list">
@@ -247,10 +256,6 @@
             </div>
           </div>
           <div class="home-actions">
-            <a href="#projects" class="button" data-i18n="hero.projects"
-              >Ver projetos</a
-            >
-
             <div class="home-social grid">
               <a
                 href="https://www.linkedin.com/in/louishb7/"
@@ -288,14 +293,22 @@
         <div class="projects-layout container grid">
           <article class="project-card project-card--featured" id="bunkercode">
             <div class="project-media project-media--featured">
-              <img
-                src="assets/img/bunkercode-cover.png"
-                alt="Interface real do BunkerCode exibindo painel de atividade e catálogo de cursos de backend"
-                data-i18n-alt="projects.bunkercode.alt"
-                class="project-image project-image--featured"
-                width="1440"
-                height="760"
-              />
+              <picture>
+                <source
+                  srcset="assets/img/bunkercode-promotional-cover.webp"
+                  type="image/webp"
+                />
+                <img
+                  src="assets/img/bunkercode-promotional-cover.jpg"
+                  alt="Arte promocional ilustrativa do BunkerCode com notebook e smartphone"
+                  data-i18n-alt="projects.bunkercode.alt"
+                  class="project-image"
+                  width="1672"
+                  height="941"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </picture>
             </div>
 
             <div class="project-content project-content--featured">

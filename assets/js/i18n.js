@@ -27,7 +27,6 @@ const translations = {
     "hero.current.description":
       "Uma plataforma autoral de aprendizagem de programação, com foco inicial em desenvolvimento backend.",
     "hero.current.cta": "Conhecer projeto",
-    "hero.projects": "Ver projetos",
     "social.linkedin": "Perfil no LinkedIn",
     "social.github": "Perfil no GitHub",
     "about.title": "Sobre",
@@ -41,7 +40,7 @@ const translations = {
     "projects.title": "Projetos",
     "projects.others": "Outros trabalhos",
     "projects.bunkercode.alt":
-      "Interface real do BunkerCode exibindo painel de atividade e catálogo de cursos de backend",
+      "Arte promocional ilustrativa do BunkerCode com notebook e smartphone",
     "projects.bunkercode.eyebrow": "PROJETO EM DESTAQUE",
     "projects.bunkercode.status": "Em desenvolvimento",
     "projects.bunkercode.description":
@@ -106,7 +105,6 @@ const translations = {
     "hero.current.description":
       "A self-authored programming learning platform, initially focused on backend development.",
     "hero.current.cta": "Explore Project",
-    "hero.projects": "View Projects",
     "social.linkedin": "LinkedIn profile",
     "social.github": "GitHub profile",
     "about.title": "About",
@@ -119,7 +117,7 @@ const translations = {
     "projects.title": "Projects",
     "projects.others": "Other Projects",
     "projects.bunkercode.alt":
-      "BunkerCode real interface showing the activity panel and backend course catalog",
+      "Illustrative BunkerCode promotional artwork with a laptop and smartphone",
     "projects.bunkercode.eyebrow": "FEATURED PROJECT",
     "projects.bunkercode.status": "In Development",
     "projects.bunkercode.description":
