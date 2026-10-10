@@ -23,6 +23,10 @@ const translations = {
     "hero.title": "Desenvolvedor com foco em Backend",
     "hero.description":
       "Desenvolvo aplicações backend e APIs, com estudos focados em TypeScript, Node.js e NestJS.",
+    "hero.current.eyebrow": "ATUALMENTE DESENVOLVENDO",
+    "hero.current.description":
+      "Uma plataforma autoral de aprendizagem de programação, com foco inicial em desenvolvimento backend.",
+    "hero.current.cta": "Conhecer projeto",
     "hero.projects": "Ver projetos",
     "social.linkedin": "Perfil no LinkedIn",
     "social.github": "Perfil no GitHub",
@@ -35,15 +39,30 @@ const translations = {
       "Estas são as tecnologias e ferramentas com as quais trabalho.",
     "skills.tools": "Ferramentas e ambiente",
     "projects.title": "Projetos",
+    "projects.others": "Outros trabalhos",
+    "projects.bunkercode.alt":
+      "Interface real do BunkerCode exibindo painel de atividade e catálogo de cursos de backend",
+    "projects.bunkercode.eyebrow": "PROJETO EM DESTAQUE",
+    "projects.bunkercode.status": "Em desenvolvimento",
+    "projects.bunkercode.description":
+      "Plataforma autoral de aprendizagem de programação, com cursos, lições em Markdown e prática de código voltados inicialmente ao desenvolvimento backend.",
+    "projects.bunkercode.stack":
+      "Monorepo PNPM · TypeScript · React · Node.js · NestJS",
+    "projects.bunkercode.cta": "Conhecer projeto",
     "projects.bunker.alt":
       "Apresentação do BunkerMode em desktop, tablet e celular",
+    "projects.bunker.eyebrow": "PROJETO AUTORAL",
+    "projects.bunker.status": "Versão concluída",
     "projects.bunker.description":
-      "Sistema de gestão de tarefas que conecta objetivos de longo prazo à execução diária.",
+      "Aplicação de organização pessoal que reúne planejamento, objetivos, tarefas e acompanhamento de atividades em uma experiência integrada.",
     "projects.cadisk.alt":
       "Apresentação do Cadisk em desktop, tablet e celular",
+    "projects.cadisk.eyebrow": "PROJETO PARA CLIENTE",
+    "projects.cadisk.status": "Trabalho freelance",
     "projects.cadisk.description":
-      "Sistema de gestão para laboratórios de prótese dentária, com acompanhamento de casos, etapas de produção e entregas.",
+      "Sistema desenvolvido para organizar o fluxo operacional de laboratórios de prótese dentária, centralizando trabalhos, clientes, prazos, entregas, acompanhamento financeiro e seleção visual por odontograma interativo.",
     "projects.live": "Ver demonstração",
+    "projects.caseStudy": "Ver estudo de caso",
     "contact.title": "Contato",
     "contact.description":
       "Estou aberto a oportunidades e conversas sobre desenvolvimento backend.",
@@ -83,6 +102,10 @@ const translations = {
     "hero.title": "Backend-Focused Developer",
     "hero.description":
       "I build backend applications and APIs, focusing my studies on TypeScript, Node.js and NestJS.",
+    "hero.current.eyebrow": "CURRENTLY BUILDING",
+    "hero.current.description":
+      "A self-authored programming learning platform, initially focused on backend development.",
+    "hero.current.cta": "Explore Project",
     "hero.projects": "View Projects",
     "social.linkedin": "LinkedIn profile",
     "social.github": "GitHub profile",
@@ -94,14 +117,29 @@ const translations = {
     "skills.description": "These are the technologies and tools I work with.",
     "skills.tools": "Tools & Environment",
     "projects.title": "Projects",
+    "projects.others": "Other Projects",
+    "projects.bunkercode.alt":
+      "BunkerCode real interface showing the activity panel and backend course catalog",
+    "projects.bunkercode.eyebrow": "FEATURED PROJECT",
+    "projects.bunkercode.status": "In Development",
+    "projects.bunkercode.description":
+      "Self-authored programming learning platform featuring courses, Markdown lessons, and hands-on code practice initially focused on backend development.",
+    "projects.bunkercode.stack":
+      "PNPM Monorepo · TypeScript · React · Node.js · NestJS",
+    "projects.bunkercode.cta": "Explore Project",
     "projects.bunker.alt":
       "BunkerMode presentation on desktop, tablet and mobile",
+    "projects.bunker.eyebrow": "PERSONAL PROJECT",
+    "projects.bunker.status": "Completed Version",
     "projects.bunker.description":
-      "Task management system that turns long-term goals into daily execution.",
+      "Personal organization application that brings together planning, goals, tasks, and activity tracking in an integrated experience.",
     "projects.cadisk.alt": "Cadisk presentation on desktop, tablet and mobile",
+    "projects.cadisk.eyebrow": "CLIENT PROJECT",
+    "projects.cadisk.status": "Freelance Work",
     "projects.cadisk.description":
-      "Dental lab management system for tracking cases, production stages and deliveries.",
+      "System built to organize the operational workflow of dental prosthesis laboratories, centralizing cases, clients, deadlines, deliveries, financial tracking, and visual tooth selection via an interactive odontogram.",
     "projects.live": "Live Demo",
+    "projects.caseStudy": "View Case Study",
     "contact.title": "Contact",
     "contact.description":
       "I'm open to opportunities and conversations about backend development.",

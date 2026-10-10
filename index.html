@@ -4,6 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+    <link
+      rel="icon"
+      href="assets/img/favicon.png"
+      type="image/png"
+      sizes="64x64"
+    />
     <meta
       name="description"
       content="Portfólio de Henrique Freitas, estudante de Desenvolvimento de Software com foco em backend, TypeScript, Node.js e NestJS."
@@ -96,16 +102,16 @@
               <a href="#home" class="nav-link" data-i18n="nav.home">Início</a>
             </li>
             <li class="nav-item">
+              <a href="#projects" class="nav-link" data-i18n="nav.projects"
+                >Projetos</a
+              >
+            </li>
+            <li class="nav-item">
               <a href="#about" class="nav-link" data-i18n="nav.about">Sobre</a>
             </li>
             <li class="nav-item">
               <a href="#skills" class="nav-link" data-i18n="nav.skills"
                 >Habilidades</a
-              >
-            </li>
-            <li class="nav-item">
-              <a href="#projects" class="nav-link" data-i18n="nav.projects"
-                >Projetos</a
               >
             </li>
             <li class="nav-item">
@@ -221,6 +227,24 @@
               Desenvolvo aplicações backend e APIs, com estudos focados em
               TypeScript, Node.js e NestJS.
             </p>
+
+            <div class="home-current">
+              <p class="home-current-eyebrow" data-i18n="hero.current.eyebrow">
+                ATUALMENTE DESENVOLVENDO
+              </p>
+              <p class="home-current-title">BunkerCode</p>
+              <p
+                class="home-current-description"
+                data-i18n="hero.current.description"
+              >
+                Uma plataforma autoral de aprendizagem de programação, com foco
+                inicial em desenvolvimento backend.
+              </p>
+              <a href="#bunkercode" class="home-current-link">
+                <span data-i18n="hero.current.cta">Conhecer projeto</span>
+                <i class="ri-arrow-down-line" aria-hidden="true"></i>
+              </a>
+            </div>
           </div>
           <div class="home-actions">
             <a href="#projects" class="button" data-i18n="hero.projects"
@@ -253,6 +277,207 @@
           </div>
           <div class="home-img-wrapper">
             <img src="assets/img/profile.png" alt="" class="home-img" />
+          </div>
+        </div>
+      </section>
+
+      <!--=============== PROJECTS ===============-->
+      <section class="projects section" id="projects">
+        <h2 class="section-title" data-i18n="projects.title">Projetos</h2>
+
+        <div class="projects-layout container grid">
+          <article class="project-card project-card--featured" id="bunkercode">
+            <div class="project-media project-media--featured">
+              <img
+                src="assets/img/bunkercode-cover.png"
+                alt="Interface real do BunkerCode exibindo painel de atividade e catálogo de cursos de backend"
+                data-i18n-alt="projects.bunkercode.alt"
+                class="project-image project-image--featured"
+                width="1440"
+                height="760"
+              />
+            </div>
+
+            <div class="project-content project-content--featured">
+              <div class="project-meta">
+                <span
+                  class="project-eyebrow"
+                  data-i18n="projects.bunkercode.eyebrow"
+                  >PROJETO EM DESTAQUE</span
+                >
+                <span
+                  class="project-badge project-badge--active"
+                  data-i18n="projects.bunkercode.status"
+                  >Em desenvolvimento</span
+                >
+              </div>
+
+              <h3 class="project-title project-title--featured">BunkerCode</h3>
+
+              <p
+                class="project-description project-description--featured"
+                data-i18n="projects.bunkercode.description"
+              >
+                Plataforma autoral de aprendizagem de programação, com cursos,
+                lições em Markdown e prática de código voltados inicialmente ao
+                desenvolvimento backend.
+              </p>
+
+              <p class="project-context" data-i18n="projects.bunkercode.stack">
+                Monorepo PNPM · TypeScript · React · Node.js · NestJS
+              </p>
+
+              <div class="project-links">
+                <a
+                  href="https://github.com/louishb7/BunkerCode"
+                  class="project-link project-link--primary"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span data-i18n="projects.bunkercode.cta"
+                    >Conhecer projeto</span
+                  >
+                  <i class="ri-github-line" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <div class="projects-others">
+            <h3 class="projects-subtitle" data-i18n="projects.others">
+              Outros trabalhos
+            </h3>
+
+            <div class="projects-container grid">
+              <article class="project-card">
+                <div class="project-media">
+                  <img
+                    src="assets/img/cadisk-cover.png"
+                    alt="Apresentação do Cadisk em desktop, tablet e celular"
+                    data-i18n-alt="projects.cadisk.alt"
+                    class="project-image"
+                    width="1366"
+                    height="720"
+                    loading="lazy"
+                  />
+                </div>
+
+                <div class="project-content">
+                  <div class="project-meta">
+                    <span
+                      class="project-eyebrow"
+                      data-i18n="projects.cadisk.eyebrow"
+                      >PROJETO PARA CLIENTE</span
+                    >
+                    <span
+                      class="project-badge"
+                      data-i18n="projects.cadisk.status"
+                      >Trabalho freelance</span
+                    >
+                  </div>
+
+                  <h4 class="project-title">Cadisk</h4>
+
+                  <p
+                    class="project-description"
+                    data-i18n="projects.cadisk.description"
+                  >
+                    Sistema desenvolvido para organizar o fluxo operacional de
+                    laboratórios de prótese dentária, centralizando trabalhos,
+                    clientes, prazos, entregas, acompanhamento financeiro e
+                    seleção visual por odontograma interativo.
+                  </p>
+
+                  <p class="project-context">
+                    Full Stack · React · Node.js · PostgreSQL · PWA
+                  </p>
+
+                  <div class="project-links">
+                    <a
+                      href="https://cadisk.vercel.app/"
+                      class="project-link"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <span data-i18n="projects.live">Ver demonstração</span>
+                      <i class="ri-external-link-line" aria-hidden="true"></i>
+                    </a>
+                    <a
+                      href="https://github.com/louishb7/Dental-lab"
+                      class="project-link"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      GitHub <i class="ri-github-line" aria-hidden="true"></i>
+                    </a>
+                  </div>
+                </div>
+              </article>
+
+              <article class="project-card">
+                <div class="project-media">
+                  <img
+                    src="assets/img/bunkermode-cover.png"
+                    alt="Apresentação do BunkerMode em desktop, tablet e celular"
+                    data-i18n-alt="projects.bunker.alt"
+                    class="project-image"
+                    width="1366"
+                    height="720"
+                    loading="lazy"
+                  />
+                </div>
+
+                <div class="project-content">
+                  <div class="project-meta">
+                    <span
+                      class="project-eyebrow"
+                      data-i18n="projects.bunker.eyebrow"
+                      >PROJETO AUTORAL</span
+                    >
+                    <span
+                      class="project-badge"
+                      data-i18n="projects.bunker.status"
+                      >Versão concluída</span
+                    >
+                  </div>
+
+                  <h4 class="project-title">BunkerMode</h4>
+
+                  <p
+                    class="project-description"
+                    data-i18n="projects.bunker.description"
+                  >
+                    Aplicação de organização pessoal que reúne planejamento,
+                    objetivos, tarefas e acompanhamento de atividades em uma
+                    experiência integrada.
+                  </p>
+
+                  <p class="project-context">
+                    Full Stack · TypeScript · React · NestJS · PostgreSQL · PWA
+                  </p>
+
+                  <div class="project-links">
+                    <a
+                      href="https://bunkermode.henriquefreitas.tech/"
+                      class="project-link"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <span data-i18n="projects.live">Ver demonstração</span>
+                      <i class="ri-external-link-line" aria-hidden="true"></i>
+                    </a>
+                    <a
+                      href="https://github.com/louishb7/TaskSystem-BunkerMode"
+                      class="project-link"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      GitHub <i class="ri-github-line" aria-hidden="true"></i>
+                    </a>
+                  </div>
+                </div>
+              </article>
+            </div>
           </div>
         </div>
       </section>
@@ -356,105 +581,6 @@
               </li>
             </ul>
           </section>
-        </div>
-      </section>
-
-      <!--=============== PROJECTS ===============-->
-      <section class="projects section" id="projects">
-        <h2 class="section-title" data-i18n="projects.title">Projetos</h2>
-
-        <div class="projects-container container grid">
-          <article class="project-card">
-            <div class="project-media">
-              <img
-                src="assets/img/bunkermode-cover.png"
-                alt="Apresentação do BunkerMode em desktop, tablet e celular"
-                data-i18n-alt="projects.bunker.alt"
-                class="project-image"
-                width="1672"
-                height="941"
-                loading="lazy"
-              />
-            </div>
-
-            <div class="project-content">
-              <p class="project-context">Full Stack · TypeScript · NestJS</p>
-              <h3 class="project-title">BunkerMode</h3>
-              <p
-                class="project-description"
-                data-i18n="projects.bunker.description"
-              >
-                Sistema de gestão de tarefas que conecta objetivos de longo
-                prazo à execução diária.
-              </p>
-
-              <div class="project-links">
-                <a
-                  href="https://bunkermode.henriquefreitas.tech/"
-                  class="project-link"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <span data-i18n="projects.live">Ver demonstração</span>
-                  <i class="ri-external-link-line" aria-hidden="true"></i>
-                </a>
-                <a
-                  href="https://github.com/louishb7/TaskSystem-BunkerMode"
-                  class="project-link"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  GitHub <i class="ri-github-line" aria-hidden="true"></i>
-                </a>
-              </div>
-            </div>
-          </article>
-
-          <article class="project-card">
-            <div class="project-media">
-              <img
-                src="assets/img/cadisk-cover.png"
-                alt="Apresentação do Cadisk em desktop, tablet e celular"
-                data-i18n-alt="projects.cadisk.alt"
-                class="project-image"
-                width="1672"
-                height="941"
-                loading="lazy"
-              />
-            </div>
-
-            <div class="project-content">
-              <p class="project-context">Full Stack · TypeScript · NestJS</p>
-              <h3 class="project-title">Cadisk</h3>
-              <p
-                class="project-description"
-                data-i18n="projects.cadisk.description"
-              >
-                Sistema de gestão para laboratórios de prótese dentária, com
-                acompanhamento de casos, etapas de produção e entregas.
-              </p>
-
-              <div class="project-links">
-                <a
-                  href="https://cadisk.vercel.app/"
-                  class="project-link"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <span data-i18n="projects.live">Ver demonstração</span>
-                  <i class="ri-external-link-line" aria-hidden="true"></i>
-                </a>
-                <a
-                  href="https://github.com/louishb7/Dental-lab"
-                  class="project-link"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  GitHub <i class="ri-github-line" aria-hidden="true"></i>
-                </a>
-              </div>
-            </div>
-          </article>
         </div>
       </section>
 

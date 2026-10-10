@@ -17,23 +17,38 @@ The portfolio includes responsive design, light and dark themes, persistent them
 
 ## Projects
 
-### BunkerMode
+### BunkerCode (Featured — In Development)
 
-Modular personal organization system built around tasks, objectives and focused execution.
+Self-authored programming learning platform featuring courses, Markdown lessons, an authoring studio, and hands-on code practice initially focused on backend development.
 
-Stack: TypeScript, React, Vite, Node.js, NestJS, Prisma, PostgreSQL, Docker and Jest.
+Stack: PNPM Monorepo, TypeScript, React, Vite, Node.js, NestJS, and Tailwind CSS.
 
-- Live Demo: https://bunkermodeproject.vercel.app/
-- GitHub: https://github.com/louishb7/TaskSystem-BunkerMode
+- GitHub: https://github.com/louishb7/BunkerCode
 
-### Cadisk
+### Cadisk (Client Project — Freelance)
 
-Dental lab workflow management system designed for CAD designers to track work received from dentists throughout its production lifecycle.
+Operational workflow management system built for a dental prosthesis laboratory to centralize cases, client dentists, deadlines, deliveries, financial tracking, and visual tooth selection via an interactive odontogram, with installable PWA and offline capabilities.
 
-Stack: TypeScript, React, Vite, Node.js, NestJS, Prisma, PostgreSQL, Docker and Jest.
+Stack: JavaScript, React, Vite, Tailwind CSS, Node.js, Express, PostgreSQL, and PWA (IndexedDB offline store).
 
 - Live Demo: https://cadisk.vercel.app/
 - GitHub: https://github.com/louishb7/Dental-lab
+
+### BunkerMode (Personal Project — Completed Version)
+
+Personal organization application that brings together planning, goals, tasks, focus mode, financial tracking, and activity tracking in an integrated experience with PWA/offline support.
+
+Stack: TypeScript, React, Vite, Node.js, NestJS, Prisma, PostgreSQL, and PWA.
+
+- Live Demo: https://bunkermode.henriquefreitas.tech/
+- GitHub: https://github.com/louishb7/TaskSystem-BunkerMode
+
+## Visual Identity
+
+The portfolio shares the **mountain + bunker** emblem with BunkerCode and BunkerMode:
+
+- `assets/img/favicon.svg`: master vector SVG (`viewBox="0 0 64 64"`) optically scaled for browser tabs with a high-contrast dark shield core and transparent exterior.
+- `assets/img/favicon.png`: 64×64 RGBA PNG fallback derived directly from the vector master.
 
 ## Contact
 
